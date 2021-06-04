@@ -1,0 +1,99 @@
+<resources>
+    <string name="app_name">ACT</string>
+    <string name="user_agreement_body">
+        Be part of the campaign to stop the spread of COVID 19. Register and provide health status to <b>Automated Contact Tracing (ACT)</b>
+        and be a responsible member of the community.\n\n
+        Do you agree to provide your personal data and health information, and understand that the data provided will be used for contact tracing
+        system database by the IATF and local government?
+    </string>
+    <string name="view_privacy_policy"><a href="https://www.privacy.gov.ph/data-privacy-act/#11"><u>View Privacy Policy</u></a></string>
+
+    <string name="yes_i_agree">Yes, I Agree</string>
+
+    <string name="first_main_question">
+        Are you currently experiencing any of these symptoms?
+    </string>
+
+    <string name="sub_question_1">
+        1. Fever/Felt Feverish
+    </string>
+
+    <string name="sub_question_2">
+        2. New worsening cough
+    </string>
+
+    <string name="sub_question_3">
+        3. Sore Throat
+    </string>
+
+    <string name="sub_question_4">
+        4. Difficulty of Breathing
+    </string>
+
+    <string name="sub_question_5">
+        5. Loss of taste and/or smell
+    </string>
+
+    <string name="sub_question_6">
+        6. Runny nose/nasal congestion
+    </string>
+
+    <string name="sub_question_7">
+        7. Headache and/or nausea
+    </string>
+
+    <string name="sub_question_8">
+        8. Muscle pain
+    </string>
+
+    <string name="sub_question_9">
+        9. Diarrhea
+    </string>
+
+    <string name="second_main_question">
+        Have you been in close contact with someone confirmed diagnosis or is being tested for COVID 19 in the past 14 days?
+    </string>
+
+    <string name="affirmation">
+        I affirm that all information I have provided are true and correct.
+    </string>
+
+    <string name="next">
+        Next
+    </string>
+    <string name="answer_health_declaration">Answer Health Declaration</string>
+
+    <string name="health_declaration">Health Declaration</string>
+    <string name="no">No</string>
+    <string name="yes">YES</string>
+    <string name="id_capture">ID Capture</string>
+
+    <string name="place_1_valid_id">
+        Place 1 valid ID within the frame and press capture. Please make sure the ID is readable and avoid reflections.
+    </string>
+
+    <string name="capture_image">Capture Image</string>
+    <string name="upload_image">Upload Image</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="fill_up_basic_information">Fill up Basic Information</string>
+    <string name="basic_information">Basic Information</string>
+
+    <string name="submission_complete">Submission Complete!\nThank you for using ACT!</string>
+    <string name="exit">Exit</string>
+
+    <string name="invalid_email">You have entered an invalid email address!</string>
+    <string name="invalid_mobile_number">You have entered an invalid contact number!</string>
+    <string name="with_empty_input">Please don\'t leave blank field/s!</string>
+    <string name="mobile_prefix">+63</string>
+    <string name="with_empty_field_error">Please make sure to answer all the questions provided!</string>
+    <string name="ok">OK</string>
+    <string name="error">Error</string>
+    <string name="image_upload_failed">Image upload failed. Please try again.</string>
+
+    <string-array name="gender">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+</resources>

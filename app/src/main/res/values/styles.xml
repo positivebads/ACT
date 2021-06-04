@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="input_field_caption_style">
+        <item name="android:layout_marginTop">@dimen/input_text_common_margin</item>
+        <item name="android:layout_marginBottom">@dimen/input_text_common_margin_bottom</item>
+    </style>
+
+    <style name="header_style">
+        <item name="android:textSize">@dimen/header_text_size</item>
+        <item name="android:textColor">@color/header_font_color</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingTop">@dimen/header_margin_top</item>
+        <item name="android:paddingBottom">@dimen/header_margin_bottom</item>
+    </style>
+
+    <style name="header_style_2">
+        <item name="android:textSize">@dimen/header_text_size</item>
+        <item name="android:textColor">@color/header_font_color</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingTop">@dimen/header_margin_top</item>
+        <item name="android:paddingBottom">@dimen/header_margin_bottom</item>
+    </style>
+
+    <style name="user_agreement_link_style">
+        <item name="android:paddingTop">@dimen/header_margin_top</item>
+        <item name="android:paddingBottom">@dimen/header_margin_top</item>
+    </style>
+
+    <style name="layout_style">
+        <item name="android:background">@drawable/gradient_white_bg</item>
+    </style>
+
+    <style name="button_style">
+        <item name="android:background">@drawable/custom_rounded_button</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="button_style_2">
+        <item name="android:layout_marginLeft">@dimen/button_margin</item>
+        <item name="android:layout_marginRight">@dimen/button_margin</item>
+        <item name="android:background">@color/button_color</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="input_field_style">
+        <item name="android:background">@drawable/custom_edittext_bg</item>
+        <item name="android:padding">@dimen/edit_text_common_padding</item>
+    </style>
+
+    <style name="mobile_input_prefix_style">
+        <item name="android:background">@drawable/custom_edittext_bg</item>
+        <item name="android:clickable">false</item>
+        <item name="android:focusable">false</item>
+        <item name="android:maxLength">3</item>
+        <item name="android:paddingLeft">@dimen/mobile_prefix_padding_left</item>
+        <item name="android:paddingTop">@dimen/mobile_prefix_padding_top</item>
+        <item name="android:paddingRight">@dimen/mobile_prefix_padding_right</item>
+        <item name="android:paddingBottom">@dimen/mobile_prefix_padding_bottom</item>
+    </style>
+
+    <style name="mobile_number_input_style">
+        <item name="android:layout_marginLeft">@dimen/mobile_number_margin_left</item>
+        <item name="android:background">@drawable/custom_edittext_bg</item>
+        <item name="android:padding">@dimen/edit_text_common_padding</item>
+        <item name="android:inputType">phone</item>
+    </style>
+
+    <style name="temperature_input_style">
+        <item name="android:background">@drawable/custom_edittext_bg</item>
+        <item name="android:padding">@dimen/temperature_input_padding</item>
+        <item name="android:paddingLeft">@dimen/edit_text_common_padding</item>
+
+    </style>
+
+    <style name="sub_header">
+        <item name="android:textSize">@dimen/header_text_size</item>
+        <item name="android:textColor">@color/header_font_color</item>
+        <item name="android:paddingTop">@dimen/header_margin_top</item>
+        <item name="android:paddingBottom">@dimen/header_margin_bottom</item>
+    </style>
+
+
+    <dimen name="temperature_input_padding">16dp</dimen>
+</resources>

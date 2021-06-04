@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="layout_padding_top">24dp</dimen>
+    <dimen name="header_text_size">24sp</dimen>
+    <dimen name="sub_header_text_size">18sp</dimen>
+    <dimen name="edit_text_common_padding">16dp</dimen>
+    <dimen name="age_width">65dp</dimen>
+    <dimen name="layout_margin_start">24dp</dimen>
+    <dimen name="layout_margin_end">24dp</dimen>
+    <dimen name="input_text_common_margin">24dp</dimen>
+    <dimen name="input_text_common_margin_bottom">12dp</dimen>
+    <dimen name="button_margin_bottom">32dp</dimen>
+
+    <dimen name="header_margin_top">16dp</dimen>
+    <dimen name="header_margin_top_x2">32dp</dimen>
+    <dimen name="header_margin_bottom">12dp</dimen>
+    <dimen name="line_spacing">5dp</dimen>
+    <dimen name="user_agreement_card_view_margin">40dp</dimen>
+    <dimen name="card_view_corner_radius">20dp</dimen>
+
+    <dimen name="button_margin">24dp</dimen>
+    <dimen name="button_margin_xl">50dp</dimen>
+    <dimen name="mobile_prefix_padding_left">12dp</dimen>
+    <dimen name="mobile_prefix_padding_top">16dp</dimen>
+    <dimen name="mobile_prefix_padding_right">12dp</dimen>
+    <dimen name="mobile_prefix_padding_bottom">16dp</dimen>
+    <dimen name="mobile_number_margin_left">8dp</dimen>
+    <dimen name="temperature_width">80dp</dimen>
+    <dimen name="success_icon">80dp</dimen>
+    <dimen name="id_place_holder_width">250dp</dimen>
+    <dimen name="id_place_holder_height">200dp</dimen>
+    <dimen name="carret_size">16dp</dimen>
+</resources>

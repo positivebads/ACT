@@ -1,0 +1,618 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.automatedcontacttracing.act.infoconfirmation.InfoConfirmationData" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".infoconfirmation.BasicInfoConfirmationFragment">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/layout_margin_start"
+                android:layout_marginLeft="@dimen/layout_margin_start"
+                android:layout_marginEnd="@dimen/layout_margin_end"
+                android:layout_marginRight="@dimen/layout_margin_end"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/layout_padding_top">
+
+                <TextView
+                    style="@style/header_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fill_up_basic_information" />
+
+                <TextView
+                    style="@style/input_field_caption_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Last Name *" />
+
+
+                <EditText
+                    android:id="@+id/etLastName"
+                    style="@style/input_field_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Last Name"
+                    android:maxLength="64"
+                    android:maxLines="1"
+                    android:text="@{data.lastName}" />
+
+
+                <TextView
+                    style="@style/input_field_caption_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="First Name *" />
+
+
+                <EditText
+                    android:id="@+id/etFirstName"
+                    style="@style/input_field_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter First Name"
+                    android:maxLength="64"
+                    android:maxLines="1"
+                    android:text="@{data.firstName}" />
+
+
+                <TextView
+                    style="@style/input_field_caption_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Middle Initial *" />
+
+
+                <EditText
+                    android:id="@+id/etMiddleInitital"
+                    style="@style/input_field_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter M.I."
+                    android:maxLength="5"
+                    android:maxLines="1"
+                    android:text="@{data.middleInitial}" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="50dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/input_field_caption_style"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Age" />
+
+
+                        <EditText
+                            android:id="@+id/etAge"
+                            style="@style/input_field_style"
+                            android:layout_width="@dimen/age_width"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:maxLength="3"
+                            android:maxLines="1"
+                            android:text="@{data.age}" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/input_field_caption_style"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Gender" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <Spinner
+                                android:id="@+id/spnGender"
+                                style="@style/input_field_style"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:entries="@array/gender"
+                                android:padding="@dimen/edit_text_common_padding"
+                                android:selectedValue="@{data.gender}"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageView
+                                android:layout_width="@dimen/carret_size"
+                                android:layout_height="@dimen/carret_size"
+                                android:layout_marginRight="@dimen/edit_text_common_padding"
+                                android:src="@drawable/ic_dropdown"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    style="@style/input_field_caption_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Email Address *" />
+
+                <EditText
+                    android:id="@+id/etEmailAddress"
+                    style="@style/input_field_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Email Address"
+                    android:inputType="textEmailAddress"
+                    android:maxLength="100"
+                    android:maxLines="1"
+                    android:text="@{data.emailAddress}" />
+
+                <TextView
+                    style="@style/input_field_caption_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Contact No. *" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <EditText
+                        android:id="@+id/etContactNoPrefix"
+                        style="@style/mobile_input_prefix_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/mobile_prefix"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <EditText
+                        android:id="@+id/etContactNo"
+                        style="@style/mobile_number_input_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter Contact Number"
+                        android:maxLength="10"
+                        android:text="@{data.mobileNumber}"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/etContactNoPrefix"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    style="@style/input_field_caption_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Address *" />
+
+                <EditText
+                    android:id="@+id/etAddress"
+                    style="@style/input_field_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Address"
+                    android:maxLength="200"
+                    android:maxLines="1"
+                    android:text="@{data.address}" />
+
+
+                <TextView
+                    style="@style/input_field_caption_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Temperature" />
+
+
+                <EditText
+                    android:id="@+id/etTemperature"
+                    style="@style/temperature_input_style"
+                    android:layout_width="@dimen/temperature_width"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:text="@{data.temperature}" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvAttachment"
+                        style="@style/input_field_caption_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Attachment"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:paddingBottom="@dimen/line_spacing"/>
+
+                    <ImageView
+                        android:id="@+id/imgAttachment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_attach"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvAttachment" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="24dp"
+                        android:gravity="center_vertical"
+                        android:text="@{data.idImagePath}"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/imgAttachment"
+                        app:layout_constraintTop_toBottomOf="@+id/tvAttachment" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    style="@style/header_style_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/health_declaration" />
+
+
+                <TextView
+                    style="@style/sub_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/first_main_question" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sub_question_1" />
+
+                <RadioGroup
+                    android:id="@+id/rgFever"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <RadioButton
+                        android:id="@+id/rbFeverNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:checked="@{!data.withFever}"
+                        android:text="@string/no" />
+
+                    <RadioButton
+                        android:id="@+id/rbFeverYes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:checked="@{data.withFever}"
+                        android:text="@string/yes" />
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sub_question_2" />
+
+                <RadioGroup
+                    android:id="@+id/rgCough"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <RadioButton
+                        android:id="@+id/rbCoughNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:checked="@{!data.withWoresningCough}"
+                        android:text="@string/no" />
+
+                    <RadioButton
+                        android:id="@+id/rbCoughYes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:checked="@{data.withWoresningCough}"
+                        android:text="@string/yes" />
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sub_question_3" />
+
+                <RadioGroup
+                    android:id="@+id/rgSoreThroat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <RadioButton
+                        android:id="@+id/rbSoreThroatNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:checked="@{!data.withSoreThroat}"
+                        android:text="@string/no" />
+
+                    <RadioButton
+                        android:id="@+id/rbSoreThroatYes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:checked="@{data.withSoreThroat}"
+                        android:text="@string/yes" />
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sub_question_4" />
+
+                <RadioGroup
+                    android:id="@+id/rgDifficultyOfBreathing"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <RadioButton
+                        android:id="@+id/rbDifficultyOfBreathingNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:checked="@{!data.withDifficultyOfBreathing}"
+                        android:text="@string/no" />
+
+                    <RadioButton
+                        android:id="@+id/rbDifficultyOfBreathingYes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:checked="@{data.withDifficultyOfBreathing}"
+                        android:text="@string/yes" />
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sub_question_5" />
+
+                <RadioGroup
+                    android:id="@+id/rgLossOfSmell"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <RadioButton
+                        android:id="@+id/rbLossOfSmellNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:checked="@{!data.withLossOfSmell}"
+                        android:text="@string/no" />
+
+                    <RadioButton
+                        android:id="@+id/rbLossOfSmellYes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:checked="@{data.withLossOfSmell}"
+                        android:text="@string/yes" />
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sub_question_6" />
+
+                <RadioGroup
+                    android:id="@+id/rgRunnynose"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <RadioButton
+                        android:id="@+id/rbRunnyNoseNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:checked="@{!data.withRunnyNose}"
+                        android:text="@string/no" />
+
+                    <RadioButton
+                        android:id="@+id/rbRunnyNoseYes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:checked="@{data.withRunnyNose}"
+                        android:text="@string/yes" />
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sub_question_7" />
+
+                <RadioGroup
+                    android:id="@+id/rgHeadache"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <RadioButton
+                        android:id="@+id/rbHeadacheNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:checked="@{!data.withHeadache}"
+                        android:text="@string/no" />
+
+                    <RadioButton
+                        android:id="@+id/rbHeadacheYes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:checked="@{data.withHeadache}"
+                        android:text="@string/yes" />
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sub_question_8" />
+
+                <RadioGroup
+                    android:id="@+id/rgMusclePain"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <RadioButton
+                        android:id="@+id/rbMusclePainNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:checked="@{!data.withMusclePain}"
+                        android:text="@string/no" />
+
+                    <RadioButton
+                        android:id="@+id/rbMusclePainYes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:checked="@{data.withMusclePain}"
+                        android:text="@string/yes" />
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sub_question_9" />
+
+                <RadioGroup
+                    android:id="@+id/rgDiarrhea"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <RadioButton
+                        android:id="@+id/rbDiarrheaNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:checked="@{!data.withDiarrhea}"
+                        android:text="@string/no" />
+
+                    <RadioButton
+                        android:id="@+id/rbDiarrheaYes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:checked="@{data.withDiarrhea}"
+                        android:text="@string/yes" />
+                </RadioGroup>
+
+                <TextView
+                    style="@style/sub_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/second_main_question" />
+
+                <RadioGroup
+                    android:id="@+id/rgWithContact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <RadioButton
+                        android:id="@+id/rbWithContactNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:checked="@{!data.withCloseContact}"
+                        android:text="@string/no" />
+
+                    <RadioButton
+                        android:id="@+id/rbWithContactYes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:checked="@{data.withCloseContact}"
+                        android:text="@string/yes" />
+                </RadioGroup>
+
+                <Button
+                    android:id="@+id/btnNext"
+                    style="@style/button_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/button_margin"
+                    android:layout_marginBottom="@dimen/button_margin_bottom"
+                    android:text="Next" />
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <ProgressBar
+            android:id="@+id/pbLoading"
+            style="@style/Widget.MaterialComponents.CircularProgressIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/act_nav_graph"
+    app:startDestination="@id/userAgreementFragment">
+
+    <fragment
+        android:id="@+id/userAgreementFragment"
+        android:name="com.automatedcontacttracing.act.useragreement.UserAgreementFragment"
+        android:label="fragment_user_agreement"
+        tools:layout="@layout/fragment_user_agreement">
+        <action
+            android:id="@+id/action_userAgreementFragment_to_basicInfoFragment"
+            app:destination="@id/basicInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/basicInfoFragment"
+        android:name="com.automatedcontacttracing.act.basicinfo.BasicInfoFragment"
+        android:label="fragment_basic_info"
+        tools:layout="@layout/fragment_basic_info">
+        <action
+            android:id="@+id/action_basicInfoFragment_to_healthDeclarationFragment"
+            app:destination="@id/healthDeclarationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/healthDeclarationFragment"
+        android:name="com.automatedcontacttracing.act.healthdeclaration.HealthDeclarationFragment"
+        android:label="fragment_health_declaration"
+        tools:layout="@layout/fragment_health_declaration">
+        <action
+            android:id="@+id/action_healthDeclarationFragment_to_idCaptureFragment"
+            app:destination="@id/idCaptureFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/basicInfoConfirmationFragment"
+        android:name="com.automatedcontacttracing.act.infoconfirmation.BasicInfoConfirmationFragment"
+        android:label="fragment_basic_info_confirmation"
+        tools:layout="@layout/fragment_basic_info_confirmation">
+        <action
+            android:id="@+id/action_basicInfoConfirmationFragment_to_submissionCompleteFragment2"
+            app:destination="@id/submissionCompleteFragment">
+            <argument
+                android:name="data"
+                app:argType="com.automatedcontacttracing.act.domain.user.response.CreateUserResponse" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/submissionCompleteFragment"
+        android:name="com.automatedcontacttracing.act.submissioncomplete.SubmissionCompleteFragment"
+        android:label="fragment_submission_complete"
+        tools:layout="@layout/fragment_submission_complete">
+
+        <argument
+            android:name="data"
+            app:argType="com.automatedcontacttracing.act.domain.user.response.CreateUserResponse" />
+    </fragment>
+    <fragment
+        android:id="@+id/idCaptureFragment"
+        android:name="com.automatedcontacttracing.act.idcapture.IdCaptureFragment"
+        android:label="fragment_id_capture"
+        tools:layout="@layout/fragment_id_capture">
+        <action
+            android:id="@+id/action_idCaptureFragment_to_basicInfoConfirmationFragment"
+            app:destination="@id/basicInfoConfirmationFragment" />
+    </fragment>
+</navigation>

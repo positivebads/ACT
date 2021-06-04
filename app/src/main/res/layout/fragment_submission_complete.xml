@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".submissioncomplete.SubmissionCompleteFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/icSuccess"
+            android:layout_width="@dimen/success_icon"
+            android:layout_height="@dimen/success_icon"
+            android:layout_marginTop="@dimen/header_margin_top_x2"
+            android:src="@mipmap/ic_success"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvSubmissionComplete"
+            style="@style/sub_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/header_margin_top"
+            android:gravity="center_horizontal"
+            android:text="@string/submission_complete"
+            android:textAlignment="center"
+            app:layout_constraintTop_toBottomOf="@+id/icSuccess" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvQrCodeImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/header_margin_top"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvSubmissionComplete">
+
+            <ImageView
+                android:id="@+id/imgQrCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/btnExit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/layout_margin_start"
+            android:layout_marginTop="@dimen/header_margin_top_x2"
+            android:layout_marginRight="@dimen/layout_margin_start"
+            android:background="@drawable/custom_rounded_button_2"
+            android:text="@string/exit"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/cvQrCodeImage" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>

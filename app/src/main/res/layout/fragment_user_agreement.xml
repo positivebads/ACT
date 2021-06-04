@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".useragreement.UserAgreementFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/user_agreement_card_view_margin"
+            android:elevation="@dimen/cardview_default_elevation"
+            app:cardCornerRadius="@dimen/card_view_corner_radius"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/layout_margin_start">
+
+                <TextView
+                    style="@style/header_style"
+                    android:id="@+id/tvTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="User Agreement"
+                    android:textAlignment="center"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvBody"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="@dimen/line_spacing"
+                    android:text="@string/user_agreement_body"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+                <TextView
+                    android:textColorLink="@color/header_font_color"
+                    style="@style/user_agreement_link_style"
+                    android:id="@+id/tvViewPolicy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/view_privacy_policy"
+                    app:layout_constraintTop_toBottomOf="@+id/tvBody" />
+
+
+                <Button
+                    style="@style/button_style"
+                    android:id="@+id/btnAgree"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/yes_i_agree"
+                    app:layout_constraintTop_toBottomOf="@+id/tvViewPolicy" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

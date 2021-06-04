@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".basicinfo.BasicInfoFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/layout_margin_start"
+            android:layout_marginLeft="@dimen/layout_margin_start"
+            android:layout_marginEnd="@dimen/layout_margin_end"
+            android:layout_marginRight="@dimen/layout_margin_end"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/layout_padding_top">
+
+            <TextView
+                style="@style/header_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/fill_up_basic_information" />
+
+            <TextView
+                style="@style/input_field_caption_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Last Name *" />
+
+
+            <EditText
+                android:id="@+id/etLastName"
+                style="@style/input_field_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Last Name"
+                android:maxLength="64"
+                android:maxLines="1" />
+
+
+            <TextView
+                style="@style/input_field_caption_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="First Name *" />
+
+
+            <EditText
+                android:id="@+id/etFirstName"
+                style="@style/input_field_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter First Name"
+                android:maxLength="64"
+                android:maxLines="1" />
+
+
+            <TextView
+                style="@style/input_field_caption_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Middle Initial *" />
+
+
+            <EditText
+                android:id="@+id/etMiddleInitital"
+                style="@style/input_field_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter M.I."
+                android:maxLength="5"
+                android:maxLines="1" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="50dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/input_field_caption_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Age" />
+
+
+                    <EditText
+                        android:id="@+id/etAge"
+                        style="@style/input_field_style"
+                        android:layout_width="@dimen/age_width"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:maxLength="3"
+                        android:maxLines="1" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/input_field_caption_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Gender" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <Spinner
+                            android:id="@+id/spnGender"
+                            style="@style/input_field_style"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/gender"
+                            android:padding="@dimen/edit_text_common_padding"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:layout_width="@dimen/carret_size"
+                            android:layout_height="@dimen/carret_size"
+                            android:layout_marginRight="@dimen/edit_text_common_padding"
+                            android:src="@drawable/ic_dropdown"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                style="@style/input_field_caption_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Email Address *" />
+
+            <EditText
+                android:id="@+id/etEmailAddress"
+                style="@style/input_field_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Email Address"
+                android:inputType="textEmailAddress"
+                android:maxLength="100"
+                android:maxLines="1" />
+
+            <TextView
+                style="@style/input_field_caption_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Contact No. *" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <EditText
+                    android:id="@+id/etContactNoPrefix"
+                    style="@style/mobile_input_prefix_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mobile_prefix"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/etContactNo"
+                    style="@style/mobile_number_input_style"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Contact Number"
+                    android:maxLength="10"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/etContactNoPrefix"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                style="@style/input_field_caption_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Address *" />
+
+            <EditText
+                android:id="@+id/etAddress"
+                style="@style/input_field_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Address"
+                android:maxLength="200"
+                android:maxLines="1" />
+
+
+            <TextView
+                style="@style/input_field_caption_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Temperature" />
+
+
+            <EditText
+                android:id="@+id/etTemperature"
+                style="@style/temperature_input_style"
+                android:layout_width="@dimen/temperature_width"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:maxLength="10"
+                android:maxLines="1" />
+
+            <Button
+                android:id="@+id/btnNext"
+                style="@style/button_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/input_text_common_margin"
+                android:layout_marginBottom="@dimen/button_margin_bottom"
+                android:text="Next" />
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</FrameLayout>
